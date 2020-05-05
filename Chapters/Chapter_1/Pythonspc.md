@@ -17,7 +17,7 @@
 > Many data are "containers"; they contain many other types of elements.
 > When actually using containers, we often need to get the elements one by one. The process of getting elements one by one is "iterating"
 
-```
+```python
 
 print(isinstance([], Iterable))  # True: list is iterable
 print(isinstance({}, Iterable))  # True: dic is iterable
@@ -32,7 +32,7 @@ with open(currPath+'/model.py') as file:
 ```
 
 **In Python We can treat every class which has ```__iter__``` attribute as a interable object<br>**
-```
+```python
 class IterObj:
     
     def __iter__(self):
@@ -45,7 +45,7 @@ print(isinstance(it, Generator)) # False
 ```
 **In Python if a class has both ```__iter__```and```__next__```attributes. we can call it an Iterator**
 
-```
+```python
 class IterObj:
 
     def __init__(self):
@@ -79,7 +79,7 @@ class IterObj:
 **As a interator. We can use ```next()``` build-in method to call the next elements:<br>**
 
 
-```
+```python
 
 In [28]: a = [1,2,3,4,5]
 

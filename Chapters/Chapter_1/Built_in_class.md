@@ -1,6 +1,11 @@
 # Build in class
 ### Bulid in Class type
 
+<!-- vim-markdown-toc GFM -->
+
+* [The Definition diff Between Can-Change and Can't-Change](#the-definition-diff-between-can-change-and-cant-change)
+
+<!-- vim-markdown-toc -->
 * The build in class that **can't** be changed:
     1. **bool**
     2. **int**
@@ -26,7 +31,7 @@ it is a Can-Change-Instance<br>
 **If we change the value of F, The result is created as a new floating point instance F.<br>**
 (The old F will being reserved as original)
 
-```
+```python
 # For Example:
 
 alpha = [1,2,3] # List Object(Can Change)
@@ -54,11 +59,12 @@ Because of that the Tuple Object is a Can't change object. Every time we change 
 ### Why We Need Can't-Change Object
 
 From [Stackoverflow](https://stackoverflow.com/questions/2174124/why-do-we-need-tuples-in-python-or-any-immutable-data-type):<br> 
-```
+```python
 $ python -mtimeit '["fee", "fie", "fo", "fum"]'
 1000000 loops, best of 3: 0.432 usec per loop
 $ python -mtimeit '("fee", "fie", "fo", "fum")'
 10000000 loops, best of 3: 0.0563 usec per loop
+
 ```
 > Immutable objects mean faster processing speed
 
