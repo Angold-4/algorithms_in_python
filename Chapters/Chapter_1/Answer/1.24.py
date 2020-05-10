@@ -1,4 +1,4 @@
-# Angold4 20200509 C1.1.23
+# Angold4 20200509 C1.1.24
 def main(String):
     List = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     Total = 0
