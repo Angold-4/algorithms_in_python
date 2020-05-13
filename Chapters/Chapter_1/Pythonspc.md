@@ -183,7 +183,3 @@ In many cases, we just need to access the elements in the container one by one.<
 **reference:**
 *[Liam](https://liam.page/2017/06/30/understanding-yield-in-python/)*
 *[Juejin](https://juejin.im/post/5ccafbf5e51d453a3a0acb42)*
-
-
-
-
