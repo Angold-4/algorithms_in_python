@@ -1,5 +1,8 @@
 # Angold4 20200513
 class CreditCard:
+    __slots__ = '_customer', '_bank', '_account', '_limit', '_balance'
+    """In order to better improve the efficiency of memory usage"""
+    """We use __slots__ instead of automatic create a dict NameSpaces"""
 
     def __init__(self, customer, bank, account, limit):
         self._customer = customer
@@ -62,3 +65,32 @@ if __name__ == "__main__":
             wallet[c].make_payment(100)
             print('New balance =', wallet[c].get_balance())
         print()
+
+"""
+
+Customer = John Bowman
+Bank = California Savings
+Account = 5391 0375 9387 5309
+Limit = 2500
+Balance = 136
+New balance = 36
+
+Customer = John Bowman
+Bank = California Federal
+Account = 3485 0399 3395 1954
+Limit = 3500
+Balance = 272
+New balance = 172
+New balance = 72
+
+Customer = John Bowman
+Bank = California Finance
+Account = 5391 0375 9387 5309
+Limit = 5000
+Balance = 408
+New balance = 308
+New balance = 208
+New balance = 108
+New balance = 8
+
+"""

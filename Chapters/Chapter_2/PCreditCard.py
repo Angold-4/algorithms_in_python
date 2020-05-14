@@ -5,6 +5,7 @@ from Range import Range
 
 class PredatoryCreditCard(CreditCard):
     """An extension to CreditCard that compounds interest and fees."""
+    __slots__ = '_apr'
 
     def __init__(self, customer, bank, acnt, limit, apr):
         super().__init__(customer, bank, acnt, limit)
