@@ -94,7 +94,7 @@ if __name__ == "__main__":
     YB = []
     F = 0
     B = 0
-    TERMS = 1000
+    TERMS = 100
     # F1 = Fish()
     # F1._set_gender(True)
     # F2 = Fish()
