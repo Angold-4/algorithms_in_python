@@ -302,3 +302,51 @@ if __name__ == "__main__":
     bookstore.settlement(Ray)
     Ray.check_wallet()
     bookstore.check_wallet()
+
+"""
+
+Miss. Ray You are already our VIP member
+You need to Pay: $ 2.99
+Processing...
+Finished! :-)
+Name: Peter Wong
+Bank: California Savings
+Account: 5391 0375 9387 6789
+Balance: 2.99
+Limit: 10000
+{'Meditations': 'https://www.amazon.com/Meditations-Marcus-Aurelius/dp/1503280462'}
+Name: John Bowman
+Bank: California Savings
+Account: 5391 0375 9387 5309
+Balance: -52.99
+Limit: 2500
+
+You need to Pay: $ 35.11
+Processing...
+Finished! :-)
+Name: Peter Wong
+Bank: California Savings
+Account: 5391 0375 9387 6789
+Balance: 38.1
+Limit: 10000
+Name: John Bowman
+Bank: California Savings
+Account: 5391 0375 9387 5309
+Balance: -88.1
+Limit: 2500
+
+You need to Pay: $ 32.385
+Processing...
+Finished! :-)
+Name: Raybb
+Bank: California Savings
+Account: 5391 0375 9387 0131
+Balance: 82.38499999999999
+Limit: 9000
+Name: John Bowman
+Bank: California Savings
+Account: 5391 0375 9387 5309
+Balance: -120.48499999999999
+Limit: 2500
+
+"""
