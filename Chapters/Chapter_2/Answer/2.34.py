@@ -117,7 +117,7 @@ class File:
 """Test"""
 
 if __name__ == "__main__":
-    F = File('2.09.py')
+    F = File('2.36.py')
     print(F.get_content())
     print(F.get_lines())
     print(F.count_letter('p'))

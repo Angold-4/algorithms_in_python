@@ -1,8 +1,8 @@
 # Angold4 20200518 2.36.py and 2.37.py
+from matplotlib import pyplot as plt
 from random import randint
 RANGE = 100
-Ecosysterm = [None]*RANGE
-from matplotlib import pyplot as plt
+ecosysterm = [None]*RANGE
 
 
 class Animal:
@@ -35,7 +35,7 @@ class Animal:
             """Stay"""
             pass
         else:
-            Ecosysterm[self._addr] = None
+            ecosysterm[self._addr] = None
             if self._addr == RANGE-1:
                 self._addr -= 1
             elif self._addr == 0:
@@ -56,12 +56,12 @@ class Bear(Animal):
 
     def goto(self):
         """Move to Other Addr in Eco"""
-        if Ecosysterm[self._addr] is None or isinstance(Ecosysterm[self._addr], Fish):
-            Ecosysterm[self._addr] = self
+        if ecosysterm[self._addr] is None or isinstance(ecosysterm[self._addr], Fish):
+            ecosysterm[self._addr] = self
         else:
-            if Ecosysterm[self._addr].get_gender() == self.get_gender():
-                if Ecosysterm[self._addr].get_strength() < self.get_strength():
-                    Ecosysterm[self._addr] = self
+            if ecosysterm[self._addr].get_gender() == self.get_gender():
+                if ecosysterm[self._addr].get_strength() < self.get_strength():
+                    ecosysterm[self._addr] = self
             else:
                 """Opposite Sex Created a New Child"""
                 Bear().goto()
@@ -71,15 +71,15 @@ class Fish(Animal):
 
     def goto(self):
         """Move to Other Addr in Eco"""
-        if Ecosysterm[self._addr] is None:
-            Ecosysterm[self._addr] = self
-        elif isinstance(Ecosysterm[self._addr], Bear):
+        if ecosysterm[self._addr] is None:
+            ecosysterm[self._addr] = self
+        elif isinstance(ecosysterm[self._addr], Bear):
             """Be Eaten"""
             pass
         else:
-            if Ecosysterm[self._addr].get_gender() == self.get_gender():
-                if Ecosysterm[self._addr].get_strength() < self.get_strength():
-                    Ecosysterm[self._addr] = self
+            if ecosysterm[self._addr].get_gender() == self.get_gender():
+                if ecosysterm[self._addr].get_strength() < self.get_strength():
+                    cosysterm[self._addr] = self
 
             else:
                 """Opposite Sex Created a New Child"""
@@ -136,11 +136,11 @@ if __name__ == "__main__":
     for j in range(10):
         Bear().goto()
     from pprint import pprint
-    pprint(Ecosysterm)
+    pprint(ecosysterm)
 
     for i in range(TERMS):
         """Cycle"""
-        for j in Ecosysterm:
+        for j in ecosysterm:
             if isinstance(j, Bear):
                 B += 1
                 j.M_S()
@@ -153,7 +153,7 @@ if __name__ == "__main__":
         F = 0
         B = 0
 
-    pprint(Ecosysterm)
+    pprint(ecosysterm)
 
     """Draw"""
 
