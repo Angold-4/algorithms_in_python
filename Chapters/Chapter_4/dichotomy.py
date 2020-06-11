@@ -1,4 +1,31 @@
 #  Position elements in an ordered array(Normal Way) Angold4 20200611
+"""
+                        Binary Search
+First thing we need to know is that Every time we do binary search
+the number of candidate entry to be found is given and is == high - low + 1
+
+Another important thing is that After Every recursive call:
+            this number n is reduced by half
+
+Specifically there are two Conditions:
+    1.n = (mid-1)-low+1 = |_(low + high) / 2_| - low <= (high-low+1)/2
+    2.n = high-(mid+1)+1 = high - |_(low + high)_| / 2 <= (high-low+1)/2
+
+From these two Conditions We can find out that:
+assuming first time the given number is high-low+1 = n
+After first binary search the remaining number are at most half(n/2)
+After second binary search the remaining number are at most half(n/4)
+...............
+After Maximum binary search(j) the remaining <= n/(2^j)
+
+
+For the Worst Condition like there is no match in the data.
+Assuming this number is r. So at that time: We have (n/2^r < 1)
+=>  r > log n  =>  r = |_log n_| + 1  =>  time Complexity is O(log n)
+
+"""
+
+
 def binary_search(data, target, low, high):
     if low > high:
         return False
