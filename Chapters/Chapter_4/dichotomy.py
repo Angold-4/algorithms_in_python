@@ -1,4 +1,5 @@
 #  Position elements in an ordered array(Normal Way) Angold4 20200611
+import Complexity
 """
                         Binary Search
 First thing we need to know is that Every time we do binary search
@@ -74,3 +75,8 @@ if __name__ == "__main__":
     24
     -5.0067901611328125e-06
     """
+
+bs = Complexity(binary_search)
+ns = Complexity(normal_search)
+
+ns.set_first_element(data)
