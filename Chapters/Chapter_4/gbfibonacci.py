@@ -50,14 +50,14 @@ if __name__ == "__main__":
 
     bf = Complexity.Complexity(bad_fibonacci)
     bf.set_first_element(1)
-    bf.set_test_range(0, 30, 1)
-    bf.statistics()
+    bf.set_test_range(0, 20, 1)
+    bf.average()
     bf.draw()
 
     gf = Complexity.Complexity(good_fibonacci)
     gf.set_first_element(1)
-    gf.set_test_range(0, 30, 1)
-    gf.statistics()
+    gf.set_test_range(0, 20, 1)
+    gf.average()
     gf.draw()
 
     Complexity.Compare(bf, gf)

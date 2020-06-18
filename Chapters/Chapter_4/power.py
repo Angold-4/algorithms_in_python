@@ -43,17 +43,17 @@ if __name__ == "__main__":
     """
 
     np = Complexity.Complexity(normal_power)
-    np.set_first_element(5)
+    np.set_first_element(2)
     np.set_second_element(1)
-    np.set_test_range(1, 500, 1)
-    np.statistics()
+    np.set_test_range(1, 300, 1)
+    np.average(1000)
     np.draw()
 
     p = Complexity.Complexity(power)
-    p.set_first_element(5)
+    p.set_first_element(2)
     p.set_second_element(1)
-    p.set_test_range(1, 500, 1)
-    p.statistics()
+    p.set_test_range(1, 300, 1)
+    p.average(1000)
     p.draw()
 
     Complexity.Compare(np, p)
