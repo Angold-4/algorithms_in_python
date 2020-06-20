@@ -46,14 +46,14 @@ if __name__ == "__main__":
     np.set_first_element(2)
     np.set_second_element(1)
     np.set_test_range(1, 300, 1)
-    np.average(1000)
+    np.average(10000)
     np.draw()
 
     p = Complexity.Complexity(power)
     p.set_first_element(2)
     p.set_second_element(1)
     p.set_test_range(1, 300, 1)
-    p.average(1000)
+    p.average(10000)
     p.draw()
 
     Complexity.Compare(np, p)
