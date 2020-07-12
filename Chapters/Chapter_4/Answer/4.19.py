@@ -11,7 +11,7 @@ def oae(l):
             b[1].append(l[0])
         return b
     return oe(l)[0] + oe(l)[1]
-    
+
 
 if __name__ == "__main__":
     print(oae([1, 3, 5, 4, 8, 10, 19]))

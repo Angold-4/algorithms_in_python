@@ -27,8 +27,8 @@ A.append(Colors.Red('orangered', 'ORed'))
 A.append(Colors.Yellow('lightyellow', 'LYellow'))
 B = list(A)  # Make a Shallow Copy or B = copy.copy(A)
 B.append(Colors.Blue('skyblue', 'SBlue'))
-print(B)  # [<__main__.Blue object at 0x10a47dca0>, <__main__.Red object at 0x10a50b8b0>, <__main__.Yellow object at 0x10a50b910>, <__main__.Blue object at 0x10a50b970>]
-print(A)  # [<__main__.Blue object at 0x104eb7ca0>, <__main__.Red object at 0x104f458b0>, <__main__.Yellow object at 0x104f45910>]
+print(B)  # [<Colors.Blue object at 0x7fa06c660b50>, <Colors.Red object at 0x7fa06c6608b0>, <Colors.Yellow object at 0x7fa06d1d29d0>, <Colors.Blue object at 0x7fa06d336490>]
+print(A)  # [<Colors.Blue object at 0x7fa06c660b50>, <Colors.Red object at 0x7fa06c6608b0>, <Colors.Yellow object at 0x7fa06d1d29d0>]
 
 
 """Deep Copy"""
@@ -38,8 +38,8 @@ A.append(Colors.Red('orangered', 'ORed'))
 A.append(Colors.Yellow('lightyellow', 'LYellow'))
 B = copy.deepcopy(A)  # Make a Deepcopy
 B.append(Colors.Blue('skyblue', 'SBlue'))
-print(B)  # [<__main__.Blue object at 0x10bcf2b50>, <__main__.Red object at 0x10bcbd1c0>, <__main__.Yellow object at 0x10bd340a0>, <__main__.Blue object at 0x10bc64ca0>]
-print(A)  # [<__main__.Blue object at 0x108d089d0>, <__main__.Red object at 0x108d08a30>, <__main__.Yellow object at 0x108d08a90>]
+print(B)  # [<Colors.Blue object at 0x7fa06d3571f0>, <Colors.Red object at 0x7fa06d3572b0>, <Colors.Yellow object at 0x7fa06d3573d0>, <Colors.Blue object at 0x7fa06c660b50>]
+print(A)  # [<Colors.Blue object at 0x7fa06d336d30>, <Colors.Red object at 0x7fa06d336d90>, <Colors.Yellow object at 0x7fa06d357070>]
 
 
 """Difference Between DCopy and SCopy"""
