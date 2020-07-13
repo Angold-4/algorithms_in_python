@@ -16,9 +16,11 @@ class DynamicArray:
 
     def __getitem__(self, k):
         """return element at index k"""
-        if not 0 <= k < self._n:
-            raise IndexError('Invalid index')
-        return self._A[k]
+        min = -(self._n + 1)
+        if not min <= k <= self._n:
+            raise IndexError("invalid index")
+        if min <= k < 0:
+            return self._A[self._n + k]
 
     def append(self, obj):
         """add object to end of the array"""
@@ -59,3 +61,36 @@ class DynamicArray:
                     self._n -= 1
                     return
             raise ValueError('value not found')
+
+    def __str__(self):
+        """return the list string"""
+        A = ''
+        for i in range(self._n):
+            A += str(i)
+        return A
+
+
+if __name__ == "__main__":
+    A = DynamicArray()
+    A.append(1)
+    A.append(2)
+    A.append(2)
+    A.append(2)
+    A.append(2)
+    A.append(4)
+    print(A[-1])
+    print(A)
+    B = (3 * ctypes.py_object)()
+    C = 3 * ctypes.py_object
+    print(B)
+    print(C)
+    """
+    for b in B:
+        print(b)
+    ValueError: PyObject is NULL
+    """
+    B[0] = 1
+    print(len(B))
+    D = ctypes.py_object()
+    print(D)
+    """py_object(<NULL>)"""

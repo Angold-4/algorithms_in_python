@@ -53,4 +53,4 @@ if __name__ == "__main__":
     coded = cipher.encrypt(message)
     print("Secret:", coded)  # Secret: WKH HDJOH LV LQ SODB; PHHW DW MRH'V.
     answer = cipher.decrypt(coded)
-    print("Message:", answer)  # Secret: WKH HDJOH LV LQ SODB; PHHW DW MRH'V.
+    print("Message:", answer)  # message = THE EAGLE IS IN PLAY; MEET AT JOE'S.
